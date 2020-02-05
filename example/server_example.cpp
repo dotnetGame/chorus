@@ -4,7 +4,7 @@
 
 int main(void)
 {
-    // Creating a server that listens on port 8080
+    // Creating a server that listens on port 7000
     chorus::Server srv(7000);
 
     // Binding a lambda function to the name "add".

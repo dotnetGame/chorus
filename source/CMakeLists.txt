@@ -4,6 +4,12 @@ set(
     CHORUS_INCLUDE_FILE
     ${PROJECT_SOURCE_DIR}/include/chorus/client.h
     ${PROJECT_SOURCE_DIR}/include/chorus/server.h
+    ${PROJECT_SOURCE_DIR}/include/chorus/serialization/sobject.h
+    ${PROJECT_SOURCE_DIR}/include/chorus/serialization/serializer.h
+    ${PROJECT_SOURCE_DIR}/include/chorus/serialization/copy_context.h
+    ${PROJECT_SOURCE_DIR}/include/chorus/serialization/deserialization_context.h
+    ${PROJECT_SOURCE_DIR}/include/chorus/serialization/serialization_context.h
+    ${PROJECT_SOURCE_DIR}/include/chorus/serialization/serialization_manager.h
 )
 
 set(

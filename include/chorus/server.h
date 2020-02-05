@@ -9,12 +9,13 @@
 
 namespace chorus
 {
+#define CHORUS_SERVER_BUF_MAX_LENGTH 128
     class Session
         : public std::enable_shared_from_this<Session>
     {
     public:
         Session(asio::ip::tcp::socket socket)
-            : socket_(std::move(socket))
+            : socket_(std::move(socket)), data_{0}
         {
         }
 
@@ -27,7 +28,7 @@ namespace chorus
         void do_read()
         {
             auto self(shared_from_this());
-            socket_.async_read_some(asio::buffer(data_, max_length),
+            socket_.async_read_some(asio::buffer(data_, CHORUS_SERVER_BUF_MAX_LENGTH),
                 [this, self](std::error_code ec, std::size_t length)
                 {
                     if (!ec)
@@ -51,8 +52,7 @@ namespace chorus
         }
 
         asio::ip::tcp::socket socket_;
-        enum { max_length = 1024 };
-        char data_[max_length];
+        char data_[CHORUS_SERVER_BUF_MAX_LENGTH];
     };
 
     class Server
