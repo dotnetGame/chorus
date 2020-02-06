@@ -17,17 +17,17 @@ namespace chorus
             return "std::uint8_t";
         }
 
-        virtual SObject deepCopier(const SObject& original, ICopyContext context) override
+        virtual SObject deepCopier(const SObject& original, ICopyContext& context) override
         {
 
         }
 
-        virtual void serializer(SObject& untypedInput, ISerializationContext context) override
+        virtual void serializer(SObject& untypedInput, ISerializationContext& context) override
         {
 
         }
 
-        virtual SObject deserializer(IDeserializationContext context) override
+        virtual SObject deserializer(IDeserializationContext& context) override
         {
 
         }

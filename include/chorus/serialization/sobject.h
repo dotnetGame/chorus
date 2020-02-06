@@ -53,19 +53,19 @@ namespace chorus
         {
         }
 
-        bool is_uint8() { return inner_.index == 0; }
-        bool is_uint16() { return inner_.index == 1; }
-        bool is_uint32() { return inner_.index == 2; }
-        bool is_uint64() { return inner_.index == 3; }
-        bool is_int8() { return inner_.index == 4; }
-        bool is_int16() { return inner_.index == 5; }
-        bool is_int32() { return inner_.index == 6; }
-        bool is_int64() { return inner_.index == 7; }
-        bool is_float() { return inner_.index == 8; }
-        bool is_double() { return inner_.index == 9; }
-        bool is_string() { return inner_.index == 10; }
-        bool is_array() { return inner_.index == 11; }
-        bool is_object() { return inner_.index == 12; }
+        bool is_uint8() { return inner_.index() == 0; }
+        bool is_uint16() { return inner_.index() == 1; }
+        bool is_uint32() { return inner_.index() == 2; }
+        bool is_uint64() { return inner_.index() == 3; }
+        bool is_int8() { return inner_.index() == 4; }
+        bool is_int16() { return inner_.index() == 5; }
+        bool is_int32() { return inner_.index() == 6; }
+        bool is_int64() { return inner_.index() == 7; }
+        bool is_float() { return inner_.index() == 8; }
+        bool is_double() { return inner_.index() == 9; }
+        bool is_string() { return inner_.index() == 10; }
+        bool is_array() { return inner_.index() == 11; }
+        bool is_object() { return inner_.index() == 12; }
 
         std::uint8_t* get_uint8_ptr() { return std::get_if<std::uint8_t>(&inner_); }
         std::uint16_t* get_uint16_ptr() { return std::get_if<std::uint16_t>(&inner_); }

@@ -15,11 +15,11 @@ namespace chorus
     {
         virtual std::string getName()=0;
 
-        virtual SObject deepCopier(const SObject& original, ICopyContext context)=0;
+        virtual SObject deepCopier(const SObject& original, ICopyContext& context)=0;
 
-        virtual void serializer(SObject& untypedInput, ISerializationContext context)=0;
+        virtual void serializer(SObject& untypedInput, ISerializationContext& context)=0;
 
-        virtual SObject deserializer(IDeserializationContext context)=0;
+        virtual SObject deserializer(IDeserializationContext& context)=0;
     };
 }
 
