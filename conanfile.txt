@@ -1,6 +1,7 @@
 [requires]
 asio/1.13.0
 spdlog/1.4.2
+boost/1.72.0
 
 [generators]
 cmake

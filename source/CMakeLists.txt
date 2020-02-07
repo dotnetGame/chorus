@@ -10,6 +10,10 @@ set(
     ${PROJECT_SOURCE_DIR}/include/chorus/serialization/deserialization_context.h
     ${PROJECT_SOURCE_DIR}/include/chorus/serialization/serialization_context.h
     ${PROJECT_SOURCE_DIR}/include/chorus/serialization/serialization_manager.h
+    ${PROJECT_SOURCE_DIR}/include/chorus/io/Stream.h
+    ${PROJECT_SOURCE_DIR}/include/chorus/net/TcpClient.h
+    ${PROJECT_SOURCE_DIR}/include/chorus/net/TcpListener.h
+    ${PROJECT_SOURCE_DIR}/include/chorus/net/NetworkStream.h
 )
 
 set(

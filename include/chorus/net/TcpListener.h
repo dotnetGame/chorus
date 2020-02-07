@@ -4,6 +4,8 @@
 #include <cstdint>
 #include <string>
 
+#include <asio.hpp>
+
 namespace chorus
 {
     class TcpListener
@@ -12,6 +14,7 @@ namespace chorus
         TcpListener(const std::string& ipAddress, std::uint16_t port)
             :ip_address_(ipAddress), port_(port)
         {
+            
         }
 
         void start()
@@ -27,6 +30,14 @@ namespace chorus
         void stop()
         {
 
+        }
+    private:
+        asio::ip::tcp::endpoint getTcpEndpoint() const
+        {
+            asio::ip::address address;
+            address.from_string(ip_address_.c_str());
+            asio::ip::tcp::endpoint endpoint(address, port_);
+            return endpoint;
         }
 
     private:
